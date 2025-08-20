@@ -1,16 +1,4 @@
 #!/usr/bin/env bash
-# This script loops indefinitely and reacts to SIGTERM with a custom message
-
-# Define a SIGTERM trap
-trap 'echo "I am invincible!!!"' SIGTERM
-
-# Infinite loop
-while true; do
-    echo "To infinity and beyond"
-    sleep 2
-done
-
-#!/usr/bin/env bash
 # This script sends SIGTERM to all running 7-highlander processes
 
 # shellcheck disable=SC2009
