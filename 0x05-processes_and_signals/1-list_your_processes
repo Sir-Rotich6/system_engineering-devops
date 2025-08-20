@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# This script lists all running processes with user-oriented details, including those without TTY, and shows hierarchy
+# This script lists all running processes with user and command, showing hierarchy
 
-ps -eo user,pid,ppid,pcpu,pmem,stime,tty,time,cmd --forest
+ps -e -o user,cmd --forest
