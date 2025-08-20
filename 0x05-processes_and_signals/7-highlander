@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# This script displays "To infinity and beyond" indefinitely
-# and prints "I am invincible!!!" when receiving SIGTERM
+# This script stops the 7-highlander process by sending SIGTERM
 
-# Trap SIGTERM and print message instead of exiting
-trap 'echo "I am invincible!!!"' SIGTERM
+# shellcheck disable=SC2009
+# Find the PID of 7-highlander
+pid=$(ps -ef | grep "[7]-highlander" | awk '{print $2}')
 
-while true; do
-    echo "To infinity and beyond"
-    sleep 2
-done
+# Send SIGTERM to the PID
+if [ -n "$pid" ]; then
+    kill -15 "$pid"
+fi
