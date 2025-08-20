@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script forcibly kills the 7-highlander process
+
+# Find the PID(s) of 7-highlander and send SIGKILL
+pkill -9 -f 7-highlander
