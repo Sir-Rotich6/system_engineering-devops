@@ -9,3 +9,10 @@ while true; do
     echo "To infinity and beyond"
     sleep 2
 done
+
+#!/usr/bin/env bash
+# This script sends SIGTERM to all running 7-highlander processes
+
+# shellcheck disable=SC2009
+pkill -f "7-highlander"
+
